@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>表单</title>
+</head>
+<body>
+    <!-- 表单
+        表单中最重要的属性value 真实值
+    -->
+    <form action="#" >
+        <!-- 单行文本域
+            value 真实的值
+            placeholder 隐藏值,不可直接获取
+        -->
+        单行文本域： <input type="text" id="uname" name="uname" value="126"/> <br/>
+        密码框： <input type="password" id="pwd" name="pwd" placeholder="请输入密码"/> <br/>
+        <!-- 隐藏域不占空间 -->
+        隐藏域：<input type="hidden"/>
+        <!-- 将我们的单选按钮设置name属性：满足互斥性  -->
+        <!--
+            checked是默认选中，不加等号是H5新特性
+            radio 是单选框
+            checkbox 是复选框
+        -->
+        单选框 <input type="radio" name="gender" value="M" /> 男
+                <input type="radio" name="gender" value="F" checked="checked"/> 女 <br/>
+        复选框   <input type="checkbox" name="hobby" value="篮球" checked="checked"/> 篮球 &nbsp;
+                <input type="checkbox" name="hobby" value="足球"/> 足球 &nbsp;
+                <input type="checkbox" name="hobby" value="乒乓球"/> 乒乓球 <br/>
+        <!-- 下拉列表  -->
+        <!--
+            selected默认选中
+            size宣示几条数据
+            multiple允许多选
+        -->
+        下拉列表
+        <select name="city" id="city">
+            <option value="021">上海</option>
+            <option value="010" selected="selected">北京</option>
+            <option value="666">广州</option>
+        </select>
+        <hr/>
+        <!-- 滚动条的下拉列表 -->
+        滚动条的下拉列表
+        <select name="city2" id="city2" size="3" multiple>
+            <option value="021">上海</option>
+            <option value="010" selected="selected">北京</option>
+            <option value="666">广州</option>
+            <option value="666">杭州</option>
+            <option value="666">南京</option>
+        </select>
+        <hr/>
+        <!-- input 按钮
+            button 普通文本按钮
+            submit 提交按钮
+            reset 重置按钮
+        -->
+        按钮
+        <input type="button" value="确定按钮"/>
+        <input type="submit" value="提交"/>
+        <input type="reset" value="重置按钮"/>
+        <hr/>
+        <!-- button按钮 -->
+        button按钮
+        <button type="submit" >提交按钮</button>
+        <button type="reset">重置按钮</button>
+        <button type="button" onclick="show();"> 普通按钮</button>
+    </form>
+    <script type="text/javascript">
+        function show () {
+            alert('我是按钮的点击事件');
+        }
+    </script>
+</body>
+</html>

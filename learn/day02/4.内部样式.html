@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>内部样式</title>
+    <style type="text/css">
+        /* 元素选择器 直接选择元素名*/
+        div{
+            /*对齐方式*/
+            text-align: center;
+            /*背景颜色*/
+            background-color:gray;
+            /*字体颜色*/
+            color: #FFFFFF;
+        }
+        h2{
+            color: #CCff00;
+            font-size: 32px;
+        }
+        /* # id选择器  表示选中id=author的元素*/
+        #author{
+            font-family: 楷体;
+            font-size: 20px;
+        }
+        #s1{
+            font-size: 22px;
+            color: aqua;
+        }
+        #s2{
+            font-size: 22px;
+            color: aqua;
+        }
+        /* ,表示并列关系，共有属性 表示选择id=s1 和 id= s2的元素 */
+        #s1,#s2{
+            font-size: 22px;
+            color: #ffff00;
+        }
+         /* "." 代表类选择器  表示class */
+        .MyFont {
+            color: red;
+        }
+        .mystyle {
+            color: chartreuse;
+        }
+
+    </style>
+</head>
+<body>
+    <!--
+        内部样式总结
+        css叠加顺序
+        1. 先叠加class样式，再叠加id样式
+        2. 类选择器 Class="s1 s2 s3 s4" 中的s1 s2 s3 s4顺序无关,叠加顺序由style中的先后顺序决定
+        3. 不同样式之间是叠加,相同样式之间是覆盖
+    -->
+    <div>
+        <h2>登高</h2>
+        <span id="author">杜甫</span>
+        <p>风急天高猿啸哀</p>
+        <p>渚清沙白鸟飞回</p>
+        <p>无边落木<span id="s1" class="MyFont mystyle">萧萧下</span></p>
+        <p>不尽长江<span id="s2" class="MyFont">滚滚来</span></p>
+    </div>
+
+
+</body>
+</html>

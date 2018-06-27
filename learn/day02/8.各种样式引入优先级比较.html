@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>样式优先级比较</title>
+    <link rel="stylesheet" href="./css/mystyle2.css"/>
+    <style type="text/css">
+        @import "./css/mystyle3.css";
+        #p1{
+            color: yellow;
+        }
+        .red {
+            color: red;
+        }
+        p{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <p id="p1" class="red" >划船不靠浆,全靠浪</p>
+    <!--
+        1.内联样式是最后叠加的
+        2.内部样式叠加顺序 元素选择器》》》类选择器》》》id选择器
+        3.内部样式优先级 高于 连接外部样式  叠加顺序 外部样式》》》内部样式》》》
+        4.连接外部样式 小于 导入外部样式,依顺序为准
+        优先级：内联>内部(id>class>元素)>@import>link
+        优先级顺序与样式叠加顺序相反
+开发规范:
+    一般先连接外部样式，然后在引入内部样式
+        开发中样式的组合：
+            连接外部link+内部 （使用最多）
+            内部+内联
+            link外部 + 内联
+
+
+    -->
+</body>
+</html>

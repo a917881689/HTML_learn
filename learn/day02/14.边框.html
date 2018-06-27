@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>边框</title>
+    <style type="text/css">
+        /* 任何元素都有边框 */
+        div {
+            /*
+                边框口诀
+                上右下左
+            */
+            width: 200px;
+            height: 200px;
+            /* 三个属性 线宽 线类型 颜色
+            border-top 上边框
+            border-right 右边框
+            border-bottom 下边框
+            border-left 左边框
+
+                solid 实线
+                dotted 点状虚线
+                dashed 横杠虚线
+                double 双横线
+            */
+            border: 5px solid aqua;
+            /* 对于每个边框单独设置*/
+            border-top: 1px solid red;
+            border-right: 2px dotted blue;
+            border-bottom: 3px dashed #db10ff;
+            border-left: 4px double #00ff00;
+
+            /* 独立写线宽，线型，颜色*/
+            border-width: 5px;
+            /* 上下  左右*/
+            border-width: 2px 5px;
+            /* 上 左右  下*/
+            border-width: 2px 5px 10px;
+            /*四个边框 上右下左*/
+            border-width: 4px 3px 2px 1px;
+
+            /*四个边框 上右下左*/
+            border-style: double double double dotted;
+
+            /*四个边框 上右下左*/
+            border-color: red blue green yellow;
+        }
+    </style>
+</head>
+<body>
+    <div>
+
+    </div>
+</body>
+</html>

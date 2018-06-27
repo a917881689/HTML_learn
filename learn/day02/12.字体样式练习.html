@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        div {
+            /* 文本对齐方式 */
+            text-align: center;
+            background-color: aqua;
+            width: 250px;
+            /*  使得块级元素居中
+                0指距离上面的元素多少距离 auto是左右多少
+            */
+            margin: 0 auto;
+            height: 250px;
+        }
+        div>h2 {
+            color: #ff55ee;
+        }
+        div>span {
+            font-family: 楷体;
+        }
+        div>p>span {
+            font-size: 24px;
+        }
+        #p1 {
+            font-style: italic;
+        }
+        #p4 {
+            font-weight: bold;
+        }
+        /* 冒号":"过滤选择器*/
+        div>p:last-child {
+            font-weight: bold;
+            color: #08ff00;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <h2>将进酒</h2>
+        <span>李白</span>
+        <p id="p1">君不见黄河之水天上来</p>
+        <p><span>奔</span>流到海不复回</p>
+        <p>君不见高堂明镜悲白发</p>
+        <p id="p4">朝如青丝暮成雪</p>
+    </div>
+
+</body>
+</html>

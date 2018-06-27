@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .div {
+            width:165px;
+            height:165px;
+            font-size:0;
+        }
+        .div>div {
+            display:inline-block;
+            width:80px;
+            height:80px;
+        }
+        #yuan1{
+            border-radius:100% 0 0 0;
+            background:#F00;
+        }
+        #yuan2{
+            border-radius:0 100% 0 0;
+            background: #f00aff;
+        }
+        #yuan3{
+            border-radius:0 0 100% 0;
+            background: #08ff00;
+        }
+        #yuan4{
+            border-radius:0 0 0 100%;
+            background: #00efff;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="div">
+        <div id="yuan1"></div>
+        <div id="yuan2"></div>
+        <div id="yuan4"></div>
+        <div id="yuan3"></div>
+    </div>
+
+</body>
+</html>

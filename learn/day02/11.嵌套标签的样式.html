@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        #u1{
+            background-color: #b1ff70;
+        }
+        /*
+            ">" 表示直属关系（亲儿子）
+            id = u1中的li
+        */
+        #u1>li{
+            background-color: #d9534f;
+        }
+        div>span{
+            color: red;
+            font-size: 24px;
+        }
+        /* 空格表示所有的后辈元素
+            div中的所有span
+        */
+        div span{
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+<ul id="u1">
+    <li><a href="">首页</a></li>
+    <li><a href="">登陆</a></li>
+    <li><a href="">注册</a></li>
+</ul>
+<ul>
+    <li><a href="">首页</a></li>
+    <li><a href="">登陆</a></li>
+    <li><a href="">注册</a></li>
+</ul>
+<hr/>
+    <div>
+        <span>衣带渐宽终不悔</span>
+        <h3>
+            <span>为伊消得人憔悴</span>
+        </h3>
+    </div>
+</body>
+</html>

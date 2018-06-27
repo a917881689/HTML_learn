@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>表格练习</title>
+</head>
+<body>
+    <table bgcolor="#7cfc00" border="1px" cellspacing="0px" align="center" width="300px">
+        <caption>我喜欢的歌曲</caption>
+        <thead align="center">
+            <tr>
+                <th>歌名</th>
+                <th>作者</th>
+            </tr>
+        </thead>
+        <tbody align="left">
+            <tr>
+                <th>光辉岁月</th>
+                <th>Beyond</th>
+            </tr>
+            <tr>
+                <th>红豆</th>
+                <th>王菲</th>
+            </tr>
+            <tr>
+                <th>我只在乎你</th>
+                <th>邓丽君</th>
+            </tr>
+            <tr>
+                <th>倩女幽魂</th>
+                <!-- rowspan上下合并单元格，表示横跨几行 -->
+                <th rowspan="2">张国荣</th>
+            </tr>
+            <tr>
+                <th>有谁共鸣</th>
+            </tr>
+        </tbody>
+        <tfoot align="left">
+            <tr >
+                <!-- colspan左右合并单元格 -->
+                <th colspan="2">现总计：5首歌曲</th>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

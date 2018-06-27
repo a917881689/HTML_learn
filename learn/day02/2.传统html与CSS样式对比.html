@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!-- 内部样式的定义方式 -->
+    <style type="text/css">
+        h2{
+            color: aqua;
+        }
+        p{
+            /*字体类型*/
+            font-family: 楷体;
+            /*字体大小*/
+            font-size: 20px;
+            /*字体粗细*/
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- 内部样式→内联样式
+        2.相同样式覆盖,不同样式叠加
+     -->
+
+    <!-- 传统方式：代码嵌套过多 -->
+    <h2> <font color="red">css标记1</font></h2>
+    <p> <font face="宋体">css标记1的正文</font></p>
+    <h2> <font color="red">css标记2</font></h2>
+    <p> <font face="宋体">css标记2的正文</font></p>
+    <h2> <font color="red">css标记3</font></h2>
+    <p> <font face="宋体">css标记3的正文</font></p>
+    <hr/>
+
+    <!-- 1.css内联样式
+        添加的是内联样式
+        内联样式：直接作用在标签本身上的样式
+    -->
+    <h2 style="color: red">css标记1</h2>
+    <p style="font-family: 宋体">css标记1的正文</p>
+    <h2 style="color: red">css标记2</h2>
+    <p style="font-family: 宋体">css标记2的正文</p>
+    <h2 style="color: red">css标记3</h2>
+    <p style="font-family: 宋体">css标记3的正文</p>
+    <hr/>
+
+    <!-- 2.css 内部样式-->
+    <h2>css标记1</h2>
+    <p>css标记1的正文</p>
+    <h2>css标记2</h2>
+    <p>css标记2的正文</p>
+    <h2>css标记3</h2>
+    <p style="font-style: italic">css标记3的正文</p>
+
+</body>
+</html>

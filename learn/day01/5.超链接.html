@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>超链接</title>
+</head>
+<body>
+    <!-- 超链接跳转网页-->
+    <!-- href 抛掷的锚点： url地址
+        target :打开url地址的目标（默认是_seft）
+        _seft 在本网页打开
+        _blank 新建一个页面打开
+        _
+    -->
+    <a href="https://www.baidu.com" target="">百度</a>
+    <a href="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1530004456637&di=924699b6ad79de30a1e53284506bee94&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimage%2Fc0%253Dshijue1%252C0%252C0%252C294%252C40%2Fsign%3D337edfa940ed2e73e8e48e6fef68cbfe%2F8ad4b31c8701a18b82d22262942f07082838fee5.jpg" target="_blank">图片</a>
+    <hr/>
+
+    <!-- 2.跳转静态网页-->
+    2.跳转静态网页
+    <a href="2.排版标签.html" target="_blank">跳转静态网页</a>
+    <hr/>
+
+    <!-- 3.跳转到本页 #-->
+    3.跳转到本页
+    <a href="#">跳转到本页的最前面</a>
+    <hr/>
+
+    <!-- 4.实现不跳转 js伪指令-->
+    4.js伪指令,不跳转
+    <a href="javascript:void(0);">不跳转</a>
+    <a href="javascript:;">不跳转2</a>
+    <hr/>
+
+    <!-- 超链接可以弹框测试 -->
+    <a href="javascript:alert('弹框测试');">弹框</a>
+    <!-- 超链接执行js脚本函数 -->
+    <a href="javascript:info('张飞');">弹出测试框</a>
+    <a href="javascript:del();">弹出确认框</a>
+
+    <script type="text/javascript">
+        //js 函数
+        function info (name){
+            //alert是警告框
+            alert("我是"+name);
+        }
+        function del () {
+            // confirm 是确认框，有返回值(确定：true,取消：false)）
+            // var是变量类型名
+            var flag = confirm("您确认要删除吗")
+            alert(flag);
+        }
+    </script>
+</body>
+</html>
