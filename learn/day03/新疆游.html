@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        * {
+            margin: 0px auto;
+            padding: 0px;
+        }
+        a {
+            /* 将行级元素转换成块级元素*/
+            display: block;
+        }
+        ul {
+            list-style-type: none;
+        }
+
+        #globallink {
+            width: 780px;
+        }
+        #globallink>li {
+            /* 行高*/
+            line-height: 33px;
+            font-size: 15px;
+            width: 78px;
+            float: left;
+            text-align: center;
+            background-image: url("./images/button1.jpg");
+            /* 背景一般不要重复*/
+            background-repeat: no-repeat;
+        }
+        #d2>img {
+            float: left;
+        }
+        #globallink>li:hover {
+            background-image: url("./images/button1_bg.jpg");
+            background-repeat: no-repeat;
+        }
+        #d1 {
+            width: 780px;
+            background-color: #123456;
+            height: 900px;
+        }
+        #d2 {
+            height: 188px;
+
+        }
+        #d3 {
+            float: left;
+            font-size: 12px;
+            width: 200px;
+        }
+        #today span>img {
+            margin-left: 10px;
+            width: 10px;
+            margin-right: 5px;
+        }
+        #d3 li,#d3 a,#weather span{
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+        #weather>ul{
+            list-style-image: url("./images/icon1.gif");
+            list-style-position: inside;
+
+        }
+        #weather>ul>li:last-child {
+            padding-bottom: 10px;
+        }
+        #weather>h3>span {
+            display: block;
+            line-height: 47px;
+            text-align: center;
+            background-image: url("./images/weather.jpg");
+            background-repeat: no-repeat;
+        }
+
+        #today,#weather>ul {
+            width: 190px;
+            float: right;
+            background-color: #5ea5ea;
+            text-align: center;
+            border: 5px solid white;
+            border-top: none;
+            border-bottom: none;
+        }
+        #today>ul:last-child {
+            border-bottom: 5px solid white;
+        }
+        #today>h3>span {
+            text-align: left;
+            display: block;
+            background-color: #badcfe;
+
+        }
+        #d4 {
+            width: 390px;
+            background-color: #ff2b3e;
+        }
+        #d5 {
+            width: 165px;
+            background-color: chocolate;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="d1">
+        <div id="d2">
+            <img src="./images/banner.jpg" alt=""/>
+            <ul id="globallink">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">新疆简介</a></li>
+                <li><a href="#">风土人情</a></li>
+                <li><a href="#">吃在新疆</a></li>
+                <li><a href="#">路线选择</a></li>
+                <li><a href="#">自助游</a></li>
+                <li><a href="#">摄影摄像</a></li>
+                <li><a href="#">游记精选</a></li>
+                <li><a href="#">资源下载</a></li>
+                <li><a href="#">雁过留声</a></li>
+            </ul>
+        </div>
+
+        <div id="d3">
+            <div id="weather">
+                <h3><span>天气查询</span></h3>
+                <ul>
+                    <li>乌鲁木齐&nbsp;&nbsp;&nbsp;雷阵雨 20℃-31℃</li>
+                    <li>吐鲁番&nbsp;&nbsp;&nbsp;多云转阴 20℃-28℃</li>
+                    <li>喀什&nbsp;&nbsp;&nbsp;阵雨转多云 25℃-32℃</li>
+                    <li>库尔勒&nbsp;&nbsp;&nbsp;阵雨转阴 21℃-28℃</li>
+                    <li>克拉马依&nbsp;&nbsp;&nbsp;雷阵雨 26℃-30℃</li>
+                </ul>
+            </div>
+            <div id="today">
+                <h3><span><img src="./images/icon2.gif" alt=""/>今日推荐</span></h3>
+                <ul>
+                    <li><a href="#"><img src="images/tuijian1.jpg"></a></li>
+                    <li><a href="#">喀纳斯河</a></li>
+                    <li><a href="#"><img src="images/tuijian2.jpg"></a></li>
+                    <li><a href="#">布尔津</a></li>
+                    <li><a href="#"><img src="images/tuijian3.jpg"></a></li>
+                    <li><a href="#">天山之路</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="d4">
+
+        </div>
+        <div id="d5">
+
+        </div>
+    </div>
+</body>
+</html>

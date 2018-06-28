@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+
+        span {
+            background-color: aqua;
+            color: black;
+            border: 3px solid red;
+            /* 对于行级元素来说，不能设置其宽度和行高（由内容决定）*/
+            line-height: 40px;
+            width: 30px;
+            /* 上右下左 */
+            padding: 10px;
+            /* 上下 右左*/
+            padding: 5px 15px;
+            /* 上 右左 下*/
+            padding: 5px 15px 5px;
+            /* 上 右 下 左 */
+            padding: 5px 15px 5px 15px;
+
+            /* 开发中常用的
+                1.padding-top
+                2.padding-right
+                3.padding-bottom
+                4.padding-left
+            */
+        }
+        /*
+            1.margin左右叠加,上下取最大
+            2.行级元素只能设置左右margin
+            3.块级元素 上下左右都有效
+        */
+        #s1 {
+            margin-right: 50px;
+            margin-bottom: 200px;
+        }
+        #s2 {
+            margin-left: 50px;
+        }
+        p {
+            margin-top:100px;
+        }
+    </style>
+</head>
+<body>
+    <span id="s1">首页</span>
+    <span id="s2">二叶</span>
+    <p>上海欢迎你</p>
+</body>
+</html>

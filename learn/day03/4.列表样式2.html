@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        * {
+            margin: 0px auto;
+            padding: 0px;
+        }
+        #u1 {
+            list-style-type: none;
+        }
+        #u1>li {
+            /* inline-block 将块级元素变为同一行上的块级元素
+                inline 将块级元素设置为行级元素
+            */
+            display: inline-block;
+            margin-right: 10px;
+        }
+        #globallink {
+            list-style-type: none;
+            width: 450px;
+        }
+        #globallink>li {
+            display: inline-block;
+            /* 行高*/
+            line-height: 33px;
+            width: 78px;
+            background-color: aqua;
+            text-align: center;
+            background-image: url("./images/button1.jpg");
+            /* 背景一般不要重复*/
+            background-repeat: no-repeat;
+        }
+        /* 冒号":" 伪类选择器
+            hover:鼠标移入移出
+        */
+        #globallink>li:hover {
+            /*background-image: url("./images/button1_bg.jpg");*/
+            background-image: url(#FFF);
+            background-repeat: no-repeat;
+        }
+        a {
+            /* 将行级元素转换成块级元素*/
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<!--图片展示-->
+<ul id="u1">
+    <li><img src="./images/beauty1.jpg" alt=""/></li>
+    <li><img src="./images/beauty2.jpg" alt=""/></li>
+    <li><img src="./images/beauty3.jpg" alt=""/></li>
+    <li><img src="./images/beauty4.jpg" alt=""/></li>
+</ul>
+<hr/>
+<!--2.导航栏-->
+<ul id="globallink">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">新疆简介</a></li>
+    <li><a href="#">风土人情</a></li>
+    <li><a href="#">路线选择</a></li>
+    <li><a href="#">售后服务</a></li>
+</ul>
+
+
+</body>
+</html>

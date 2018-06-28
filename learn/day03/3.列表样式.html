@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        #u1 {
+            /* 去掉列表项的标志*/
+            list-style-type: none;
+        }
+        #u2 {
+            /* 列表项设置为图片 */
+            list-style-image: url("./images/icon1.gif");
+            list-style-position: inside;
+            background-color: aqua;
+            width: 150px;
+        }
+        #u2>li {
+            border-bottom:1px dashed #FFF;
+        }
+        #u3 {
+            border: 1px solid red;
+            /* 设置列表项的标志位置
+                默认是在li标志的外面
+                outside 设置标志在li的外面
+            */
+            list-style-position: outside;
+        }
+        #u3>li {
+            border: 1px solid blue;
+        }
+        #u4 {
+            border: 1px solid red;
+            /* 设置列表项的标志位置
+                默认是在li标志的外面
+                inside 设置在标志在里面
+            */
+            list-style-position:inside;
+        }
+    </style>
+</head>
+<body>
+<!-- 去掉点的列表 -->
+<ul id="u1" >
+    <li>首页</li>
+    <li>登录</li>
+    <li>注册</li>
+    <li>退出</li>
+</ul>
+<hr/>
+<!-- 2.列表项标志是图片 -->
+<ul id="u2">
+    <li>香格里拉酒店</li>
+    <li>维也拉酒店</li>
+    <li>维多利亚酒店</li>
+    <li>四季酒店</li>
+</ul>
+<hr/>
+<!--列表项标志的里外对比-->
+<ul id="u3">
+    <li>香格里拉酒店</li>
+    <li>维也拉酒店</li>
+    <li>维多利亚酒店</li>
+    <li>四季酒店</li>
+</ul>
+<hr/>
+<ul id="u4">
+    <li>香格里拉酒店</li>
+    <li>维也拉酒店</li>
+    <li>维多利亚酒店</li>
+    <li>四季酒店</li>
+</ul>
+</body>
+</html>
