@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+    var str = "shanghai_2018";
+    // 字符串长度（在Java Script 中字符串和数组的长度 都使用 length,不用加括号）;
+    document.write("1.字符串长度：(str.length)"+str.length+"<br/>");
+    // 通过字符串查询指定索引处的字符
+    document.write("2.查询指定索引处的字符：(str.charAt(字符串索引))"+str.charAt(8)+"<br/>")
+    // 3.字符串截取
+    // str.substring() 默认截取字符串全部内容
+    //str.substring(9) 默认从索引9到字符串末尾
+    document.write(str.substring(9)+"str.substring(9) 从索引9到字符串末尾 <br/>");
+    document.write(str.substring(0,9)+"str.substring(0,9) 从索引0截取到索引9-1，<br/>");
+    document.write(""+str.substr(9)+"str.substr(9) 从索引9到字符串末尾和str.substring(9)一样 <br/>");
+    document.write(""+str.substr(0,8)+"str.substr(0,8)从索引0开始,一共截取8个字符 <br/>");
+    // 4.字符串的拼接 concat(mybits用于模糊查询)
+    str_new = str.concat("上海")
+    document.write(str_new);
+    // 5.字符串的替换 replace(old,new)
+    str.replace("2018","2019");
+    document.write(str_new+"<br/>");
+    // 6.去掉两端的空格 trim()
+    var s = "   admin  ";
+    var ss = s.trim();
+    document.write("字符串原始长度："+s.length+"  去掉两端空格后:"+ss.length+"<br/>");
+    // 比较字符串中的内容
+    str  = "123";
+    num = 123;
+    //在java script 中 == 比较值
+    //在java script 中 === 绝对等（比较值又比较类型）;
+    document.write(str==num);
+    document.write(str===num);
+    document.write(" <br/>")
+    // 8.分割split
+    var http = "http://www.baidu.com?uname=admin&pwd=123"
+    // java Script 中所有特殊字符都可以直接使用
+    var arr = http.split("?");
+    brr = arr[1].split("&")
+    document.write(brr)
+
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+    /* 1.javascript变量定义
+    *   显示定义，隐式定义
+    *  123和123.3 都属于number 类型
+    *  字符串不区分单双引号
+    */
+    var a = 123; //number
+    var a = 123.3; //number
+    a = true; // boolean
+    a = "a" //string
+    a = 'a' //string
+    arr = 1,2,3,4,5 //arr = 1,后面的变量没有接收
+    arr = [1,2,3,4,5] //object 对象类型
+    arr = new Array(); //object
+    arr[0] = 1;
+    arr[3] = "3"; //类似于java中的List<object>类型的集合
+    //alert(typeof arr[3] );
+    //alert(arr[1]); //当变量没有赋值时，则类型为undefined[未定义类型]
+    var time = new Date()
+    //alert(time);
+    document.write(time);
+    document.write("<h1>"+time+"</h1>");
+    var str = "总结：js中常见的类型有number,string,boolean,object[数组，日期，自定义对象],undefined(未定义类型)，null(空)"
+    document.write(str);
+
+    // 变量的定义
+    var a, b,c
+    var x, y, z = true,12,"123";
+</script>
+</body>
+</html>

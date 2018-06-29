@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <a href="javascript:factorial(5);">5!</a>
+    <script type="text/javascript">
+
+        function factorial(num) {
+            // 不是一个数值返回true
+            if (isNaN(num)) {
+                return "只有数值才可以返回阶乘"
+            }
+            if (num <= -1) {
+                return "负数没有阶乘";
+            }
+            if (num == 0) {
+                return 1;
+            }
+            var product = 1;
+            for (var i = 1;i <= num;i++) {
+                product *= i;
+            }
+            alert(product);
+        }
+        var result = factorial(6)
+        // alert(result);
+
+        // 2.函数的递归（函数自身调用自身：必须有行进条件和边界值）
+        function factorial2(num) {
+            // 不是一个数值返回true
+            if (isNaN(num)) {
+                return "只有数值才可以返回阶乘"
+            }
+            if (num <= -1) {
+                return "负数没有阶乘";
+            }
+            // 边界值 0
+            if (num == 0) {
+                return 1;
+            }
+            // 行进条件
+            return num*(factorial2(num-1));
+        }
+    </script>
+</body>
+</html>

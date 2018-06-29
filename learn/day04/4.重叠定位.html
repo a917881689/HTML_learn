@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        /* z-index值越大 离你越近 */
+        #d1 {
+            padding: 20px 50px;
+            width: 200px;
+            background-color: #0bff01;
+            /* 覆盖定位必须是在实现定位的基础上才可以生效 */
+            position: absolute;
+            z-index: 3;
+        }
+        #d2 {
+            padding: 20px 50px;
+            width: 200px;
+            background-color: #ff3900;
+            position: absolute;
+            top: 45px;
+            left: 50px;
+            z-index: 2;
+        }
+        #d3 {
+            padding: 20px 50px;
+            width: 200px;
+            background-color: #f500ff;
+            position: absolute;
+            top: 83px;
+            left: 100px;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1">AAAAA</div>
+    <div id="d2">BBBBB</div>
+    <div id="d3">CCCCC</div>
+</body>
+</html>

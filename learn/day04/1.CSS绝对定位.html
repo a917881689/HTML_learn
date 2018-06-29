@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #d1 {
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+        }
+        #d2 {
+            width: 100px;
+            height: 100px;
+            background-color: #0bff01;
+            /*
+                static默认文档流
+                absolute 绝对定位
+                绝对定位：独立元素会根据浏览器左上顶点定位，会释放掉元素原有的空间
+             */
+            position: absolute;
+            top: 50px;
+            left: 50px;
+        }
+        #outer {
+             width: 200px;
+             height: 200px;
+             background-color: red;
+         }
+        #inner {
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            /* 子元素设置绝对定位 */
+            position: absolute;
+            top: 250px;
+            left: 50px;
+        }
+
+        #outer2 {
+            width: 200px;
+            height: 200px;
+            background-color: #ff7a00;
+            position: absolute;
+        }
+        #inner2 {
+            width: 100px;
+            height: 100px;
+            background-color: #fb00ff;
+            /* 子元素设置绝对定位 */
+            position: absolute;
+            top: 50px;
+            left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 1.两个独立元素 -->
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <!--<h3>绝对定位：独立元素会根据浏览器左上顶点定位，会释放掉元素原有的空间</h3>-->
+
+    <!-- 2.嵌套元素 子元素设置定位 -->
+    <div id="outer">
+        <div id="inner"></div>
+    </div>
+    <!--<h3>当父元素没有定位时，若子元素设置了绝对定位，则会自动脱离父容器并释放元素空间，默认会以浏览器左上点定位</h3>-->
+
+    <!-- 2.嵌套元素 父子元素都设置定位 -->
+    <div id="outer2">
+        <div id="inner2"></div>
+    </div>
+    <h3>当父元素设置定位时，子元素的定位的参考点都是父容器的左上顶点（重点）</h3>
+</body>
+</html>

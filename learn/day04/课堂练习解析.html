@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        span{
+            border: 1px solid black;
+            line-height: 20px;
+
+        }
+    </style>
+</head>
+<body>
+    <script type="text/javascript">
+        var t_name
+        var max_num = 0;
+        var fruits = ["苹果","香蕉","苹果","梨","苹果","火龙果"];
+        for (var i = 0;i < fruits.length ;i++) {
+            var temp = 0;
+            for (var j = 0;j < fruits.length ;j++) {
+                if (fruits[j] == fruits[i]){
+                    temp+=1;
+                }
+            }
+            if (temp > max_num){
+                max_num = temp;
+                t_name = fruits[i];
+            }
+        }
+        document.write(t_name+"出现"+max_num+"<br/>");
+
+        var str = "";
+        for (var i = 1;i <= 9;i++) {
+            for (var j = 1;j <= i;j++) {
+                str += "<span>"+j+"&times;"+i+"="+(i*j)+"</span>"
+            }
+            str += "<br/> "
+        }
+        document.write(str)
+    </script>
+</body>
+</html>

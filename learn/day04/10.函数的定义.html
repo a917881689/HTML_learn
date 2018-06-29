@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script type="text/javascript">
+        // 函数在定义的时候，没有访问修饰符和返回值类型
+        // 1.命名函数(有名函数)
+        show();
+        function show() {
+            alert("我是命名函数");
+        }
+        // 方法名相同,则方法直接覆盖
+        function show(name) {
+            alert("我是"+name);
+        }
+        // js中无需关注返回值类型,函数会自动接收
+        function show2(num) {
+            if (num%2 == 0) {
+                return "偶数";
+            }else {
+                return "奇数";
+            }
+        }
+
+        // 函数的调用
+        // 2.匿名函数(变量名就是 函数名)
+        // 匿名函数的调用必须在 函数定义之后
+        var info = function() {
+            alert("我是匿名函数");
+        }
+        info();
+        // 3.函数创建的第三种方法
+        new Function(alert("我是函数的第三种创建方式"))
+    </script>
+</body>
+</html>

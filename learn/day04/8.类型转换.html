@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script type="text/javascript">
+        /**
+         * 1.将其他类型转换成字符串 + toString
+         */
+        var a = 10;
+        var b = true;
+        var c = 10.3;
+        var d = a+"";
+        // 只能变量. toString
+        // 常量是常量,没有方法，变量是对象有方法
+        var e = a.toString();
+        //alert(typeof d) // typeof 变量 查看变量属性
+        // 2.怎么转换int 和 float
+        // java 会抛出 NumberFormatException
+        var str = "a12a3a.34";
+        // parseInt 解析的数值第一个不是数值时会产生 NaN: not a number
+        // parseInt 解析的数值 ，直到解析的不是数值时
+        document.write(parseInt(str));
+        var str2 = "1234.1231"
+        var x = parseFloat(str2);
+        // 无论是int 还是float 都是number类型
+        document.write(typeof x);
+
+
+    </script>
+
+</body>
+</html>

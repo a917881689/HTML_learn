@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+//    arr= [1,2,3,4,5,6,7]
+//    for (i = 0;i < arr.length;i++) {
+//        alert(arr[i])
+//    }
+    //找出 出现次数最多的水果和次数
+    var fruits = ["苹果","香蕉","苹果","梨","苹果","火龙果"];
+    var num = new Array();
+
+    var nam = new Array();
+    count = [0,0];
+    for (var i = 0,j = 0;i < fruits.length ;i++) {
+        var flag = true;
+        //遍历判断 重复出现过没有
+        for (var k = 0;k < j;k++) {
+            //名字相同,重复出现过
+            if (nam[k] == fruits[i]) {
+                //标记
+                flag = false;
+                //找到名字对应的水果+1;
+                //并结束循环
+                num[k] = num[k]+1;
+                if(num[k] > count[1]) {
+                    count[0] = k;
+                }
+                break;
+            }
+        }
+        //没有重复过
+        if(flag) {
+            //记录名称
+            nam[j] = fruits[i];
+            //初始化数量
+            num[j] = 1;
+            j++;
+        }
+    }
+    alert(nam[count[0]])
+    alert(num[count[0]])
+</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        #d1 {
+            width: 200px;
+            height: 200px;
+            background-color: #ff4200;
+            border-radius: 50%;
+        }
+        #d2 {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            background-color: #006dff;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+        }
+        #outer {
+            width: 200px;
+            height: 200px;
+            background-color: #ff4200;
+            margin: 0px auto;
+            border-radius:50%;
+        }
+        #inner {
+            width: 100px;
+            height: 100px;
+            background-color: #13ff00;
+            border-radius:50%;
+            position:relative;
+            top: 50px;
+            left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <!--
+        2.嵌套元素
+        嵌套元素，子随父动
+    -->
+    <div id="outer">
+        <div id="inner"></div>
+    </div>
+</body>
+</html>

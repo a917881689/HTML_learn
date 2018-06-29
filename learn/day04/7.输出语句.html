@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>脚本输出语句</title>
+</head>
+<body>
+    <script type="text/javascript">
+        /** 1.警告弹框 alert
+         * 一般会省略window
+         */
+        window.alert("警告弹框");
+        // 2.确认框 confirm (一般会省略window)
+        // 确认（返回true） 取消(返回false)
+        var flag = window.confirm("你确认要删除吗？");
+        // 3.输入框prompt (一般会省略window)
+        var input_s = window.prompt("请输入姓名:")
+        // 返回值
+        // 确认：没有内容返回空字符串 "",输入了文本，返回此文本
+        // 取消，返回null类型
+        alert(input_s);
+        /** 浏览器console (控制台)输出 (window可省略)
+         */
+        window.console.log('我是控制结果')
+        /**
+         * 输出到网页上
+         */
+        document.watch(new Date());
+    </script>
+</body>
+</html>
