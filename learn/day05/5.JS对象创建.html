@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script type="text/javascript">
+        // 1.通过构造器创建(压根不使用)
+        function Student (name,age) {
+            this.name = name;
+            this.age = age;
+        }
+        var stu = new Student("张三",18)
+        // 对象[object object]
+        document.write(stu);
+        document.write(stu.name);
+        document.write(stu.age);
+
+        // 2.实例化一个object来创建 (压根不使用)
+        var stu = new Object();
+        stu.name = "张三";
+        stu.sab = "小三";
+        document.write(stu.name);
+        document.write(stu.sab);
+
+        // 3.使用JSON创建对象
+        // JSON有两种格式 对象模式(键名必须是双引号的字符串)
+        // 对象{"key1":value1,"key2":value}
+        // 数组形式[{}，{}，{}，{}]每个{}都是一个对象
+
+        // 练习：将18岁的张三创建成JSON格式字符串
+        var s = {"name":"张三","ages":"18"};
+        document.write("<br/> JSON格式："+s.name+","+ s.ages);
+
+        // 练习2：将18岁的张三，25岁的李四创建成JSON数组格式的字符串
+        var stus = [{"name":"张三","ages":"18"},{"name":"李四","ages":"25","sex":"男"}]
+        document.write("<br/> JSON格式："+stus[0].name+","+ stus[0].ages+","+ stus[0].sex);
+        document.write("<br/> JSON格式："+stus[1].name+","+ stus[1].ages+","+ stus[1].sex);
+
+        // 思考：JSON格式可以遍历吗
+
+        for (var index in stus) {
+            document.write("<br/> 姓名："+stus[index].name+",年龄："+ stus[index].ages+",性别："+ stus[index].sex);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+    //1.除法
+    var a = 8/3;
+    var b = parseInt(a);
+    document.write(a+"<br/>");
+    document.write(b);
+    // 三目运算符 条件 ？ 成立：不成立
+    if (b==2) {
+        //alert("结果正确");
+    }else {
+        alert("结果错误");
+    }
+    document.write(b==2?"<br/> 结果正确":"结果错误");
+
+    // 3.高效计算的左右移
+    document.write("<br/>"+(2<<4));
+    document.write("<br/>"+a);
+    // JS中 右移出去的东西不会保留小数（一般不用）
+    document.write("<br/>"+(2>>2));
+
+    // 4.等号运算
+    var c = 123
+    var d = "123"
+    document.write(c==d);
+    // js中没有equals方法
+    // 两个等号,属性相等,三个等号,绝对等
+    document.write(c===d);
+
+    // 5.判断类型
+    typeof a;
+    if (a instanceof String) {
+
+    }
+</script>
+</body>
+</html>

@@ -216,7 +216,7 @@ button {
     float: left;
     border: 1px solid #cbcbcb;
 }
-.promote_game>img {
+.promote_game>a>img {
     width: 180px;
     height: 145px;
     float: left;
@@ -265,6 +265,7 @@ button {
     display: block;
     text-align: center;
 }
+
 .game_info {
     float: left;
     width: 130px;
@@ -318,15 +319,11 @@ button {
     padding-bottom: 10px;
 }
 #video>.video_info {
+    width: 237px;
     float: left;
     margin: 16px 5px 16px 10px;
 }
-.video_info>img {
-    float: left;
-    width: 140px;
-    height: 85px;
-}
-.video_info>a {
+.game_text {
     width: 94px;
     float: left;
     color: #2b62a4;
@@ -334,6 +331,12 @@ button {
     font-size: 14px;
     line-height: 22px;
 }
+.game_img {
+    float: left;
+    width: 140px;
+    height: 85px;
+}
+
 #d_footnotes {
     float: left;
     width: 1000px;

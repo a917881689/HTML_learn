@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <h2>DOM(Document Object Model)文档对象模型</h2>
+    <p id="p1"><b>长风破浪会有时,直挂云帆济沧海</b></p>
+    <hr/>
+    <input type="radio" name="gender" checked="checked" value="M"/> 男
+    <input type="radio" name="gender" value="F"/> 女
+    <hr/>
+    <input type="checkbox" name="hubby" value="篮球"/> 篮球 &nbsp;
+    <input type="checkbox" name="hubby" value="足球"/> 足球 &nbsp;
+    <input type="checkbox" name="hubby" value="排球"/> 排球 &nbsp;
+<script type="text/javascript">
+    // window.onload (重点) 先加载页面中的所有资源（所有标签及静态资源、图片、音频、视频）
+    window.onload = function() {
+        // 1.通过ID来获取元素
+        var p1 = document.getElementById('p1');
+        // inner Text 只获取标签中的纯文本信息
+        // alert(p1.innerText);
+        // innerHTML 获取标签中的所有内容 包括标签、纯文本
+        // alert(p1.innerHTML);
+
+        // 通过标签名来获取元素
+        var inputs = document.getElementsByTagName('input');
+        var man = inputs[0].value
+        // alert(man);
+
+        var hubby = document.getElementsByName('hubby');
+        /*for (var index = 0;index < hubby.length;index++) {
+         alert(hubby[index].value);
+         }*/
+        // 一般不会使用,当页面被加载后再执行它时会将整个页面内容覆盖掉
+        document.write("sb250");
+        // JS修改元素的样式： 对象.style.属性名 = 属性名
+        // eg: span.style.color = 'red';
+    }
+
+</script>
+</body>
+</html>

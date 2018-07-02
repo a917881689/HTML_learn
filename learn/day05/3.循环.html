@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+    // 1. while 当型循环
+    // 循环次数不确定时
+    var i = 1;
+    var sum = 0;
+    while (i <= 100) {
+        sum += 1;
+        i++;
+    }
+    document.write(sum);
+
+    // 2.do...while 直到型循环
+    var i = 1;
+    var sum = 0;
+    do {
+        sum += 1;
+        i++;
+    }while (i <= 100);
+
+    // 3.for 循环
+    // 循环次数确定时,一般用于遍历
+    for (var i = 1;i <= 100;i++) {
+        sum += i;
+    }
+
+    // 4.遍历
+    // 遍历1
+    var arr = [1,2,3,4,5,6,7]
+    for (var i = 0;i < arr.length;i++) {
+        document.write(arr[i]);
+    }
+    // 遍历2 for in 遍历 js中特有的遍历方式
+    for (var index in arr) {
+        document.write(arr[index]);
+    }
+</script>
+</body>
+</html>

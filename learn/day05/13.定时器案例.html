@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <h2>倒计时10秒 跳转到百度</h2>
+    <br/>
+    <h1 id="time"></h1>
+    <script type="text/javascript">
+        window.onload = function() {
+            var num = 10;
+            var timer = setInterval(function(){
+                document.getElementById("time").innerText = num--;
+                if (num <= 0) {
+                    // 停止定时器
+                    clearInterval(timer);
+                    location.href = "https://www.baidu.com";
+                }
+            },1000);
+
+        }
+    </script>
+</body>
+</html>

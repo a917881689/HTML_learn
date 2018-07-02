@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <!--
+        onclick 鼠标点击事件
+        onmousemove 鼠标移入
+        onmouseout 鼠标移出
+        onfocus 获取焦点
+        onblur 失去焦点
+    -->
+    <a href="javascript:">不跳转超链接</a>
+    <a href="javascript:" onclick="show('我是超链接');">超链接当按钮</a>
+    <input type="button" onclick="show('我是input按钮')"  value="input按钮"/>
+    <button type="button" onclick="show('我是button按钮');">button按钮</button>
+    <hr/>
+    <span id="s1" onmousemove="changeRed();" onmouseout="changeBlack()">测试文本</span>
+    <br/>
+    <laber for="uname_s" >用户名</laber>
+    <input type="text" id="uname" onfocus="my_focus()" onblur="my_blur()" placeholder="请输入用户名"/>
+    <span id="uname_s" onfocus=""></span>
+<script type="text/javascript">
+    // 创建一个匿名函数
+    var show = function (str) {
+        alert("哈哈"+str);
+    }
+    function changeRed () {
+        var s1 = document.getElementById('s1');
+        // document.write(s1);
+        s1.style.color = 'red';
+    }
+    function changeBlack () {
+        var s1 = document.getElementById('s1');
+        // document.write(s1);
+        s1.style.color = 'black';
+    }
+    function my_focus () {
+        var uname_s = document.getElementById('uname_s');
+        uname_s.innerText = 'X 用户名为空必须是数字、字母、下划线组成'
+        uname_s.style.color = 'black';
+    }
+    function my_blur () {
+        // 通过ID找到用户名的input标签 (只有input标签才有value值)
+        var uname = document.getElementById('uname').value;
+        // 获取input 后面的 span标签
+        var uname_s = document.getElementById('uname_s');
+        // input标签获取的空为：空串""
+        if ("" == uname) {
+            uname_s.innerText = "用户名不能为空";
+            uname_s.style.color = "red";
+        }else {
+            // 获取text文本信息
+            uname_s.innerText = "√可用";
+            uname_s.style.color = "Green";
+        }
+        // DOM
+        // Document Object Model
+    }
+</script>
+</body>
+</html>

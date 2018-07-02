@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <button type="button" id="close">停止定时</button>
+    <script type="text/javascript">
+        // window.setInterval BOM中的定时器 (window可省略)
+        // 语法：window.setInterval(定时函数,定时时间（毫秒数）);
+        var timer = setInterval(function(){
+            // 定时任务
+            alert("123");
+        },3000)
+        document.getElementById("close").onclick =  function () {
+            // 停止定时器
+            clearInterval(timer);
+        }
+    </script>
+</body>
+</html>

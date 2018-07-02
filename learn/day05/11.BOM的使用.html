@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <h2>BOM 浏览器对象模型(与浏览器对话)</h2>
+    <button type="button" id="btn">百度</button>
+    <script type="text/javascript">
+        // window是最大对象（包含了所有的对象，包括document）
+        // window.location 获取url地址
+        document.write(window.location);
+
+        // 功能：点击百度按钮跳转到百度网页
+        document.getElementById("btn").onclick = function(){
+            location.href = "https://www.baidu.com";
+        };
+        window.alert("警告框")
+        var result = window.confirm("确认框")
+        var result2 = window.prompt("输入框");
+    </script>
+</body>
+</html>

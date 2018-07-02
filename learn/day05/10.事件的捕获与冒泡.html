@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        div{
+            padding: 50px 100px;
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1">
+        <p id="p1">我是冒泡的事件</p>
+    </div>
+    <hr/>
+    <div id="d2">
+        <p id="p2">我是捕获的事件</p>
+    </div>
+    <script type="text/javascript">
+        // 测试冒泡(由内及外冒泡执行事件)
+        var d1 = document.getElementById('d1');
+        var p1 = document.getElementById('p1');
+        d1.addEventListener('click',function(){
+            alert("我是外部元素");
+        },false);
+        p1.addEventListener('click',function(){
+            alert("我是内部元素")
+        },false);
+        // 测试捕获 (由外及内捕获执行事件)
+        var d2 = document.getElementById('d2');
+        var p2 = document.getElementById('p2');
+        d2.addEventListener('click',function(){
+            alert("我是外部元素");
+        },true);
+        p2.addEventListener('click',function(){
+            alert("我是内部元素")
+        },true);
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <h1 id="localtime"></h1>
+    <script type="text/javascript">
+        window.onload = function() {
+            setInterval(function(){
+                var time = new Date;
+                // 将格林尼治时间自动转换称当前时区时间
+                time = time.toLocaleString();
+                document.getElementById("localtime").innerText = time;
+            },1000);
+
+        }
+    </script>
+</body>
+</html>

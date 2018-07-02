@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <a href="javascript:dismantling();">拆弹专家</a>
+    <h4 id="time_s"></h4>
+    <script type="text/javascript">
+        window.onload = function() {
+            // 到时见只会执行一次定时任务
+            // var 是局部变量定义
+            var num = 10;
+
+            var timer2 = setInterval(function(){
+                document.getElementById("time_s").innerText = "离炸弹爆炸还剩余"+num--+"秒";
+                if(num == 0 ) {
+                    clearInterval(time2);
+                    clearTimeout(timer)
+                }
+            },1000);
+
+            var timer = setTimeout(function(){
+                document.write('炸弹爆炸')
+            },10000);
+        }
+
+        function dismantling() {
+            clearTimeout(timer);
+            clearInterval(timer2);
+        }
+    </script>
+</body>
+</html>

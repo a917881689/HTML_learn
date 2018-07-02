@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        ul{list-style-type: none;}
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #container {
+            margin: auto;
+            margin-top: 100px;
+            width: 400px;
+            height: 400px;
+            border: 1px solid #2456ff;
+            position: relative;
+            background-color: #d6ddc4;
+        }
+        #view {
+            margin: auto;
+            width: 360px;
+            margin-top: 20px;
+            height: 300px;
+        }
+        #view_d1 {
+            padding-left: 50px;
+            width: 130px;
+            float: left;
+        }
+        #view_d1 li {
+            line-height: 50px;
+            font-size: 23px;
+            font-family: NSimSun;
+            font-weight: bolder;
+        }
+        #view_d2 {
+            width: 180px;
+            float: left;
+        }
+        #view_d2 li {
+            line-height: 50px;
+        }
+        input {
+            height: 25px;
+        }
+        #d_btn {
+            position: absolute;
+            bottom:20px;
+        }
+        button {
+            border: none;
+            border-radius: 5px;
+            cursor:pointer;
+            width: 150px;
+            height: 35px;
+            font-size: 1.4rem;
+            color: white;
+            font-family: NSimSun;
+            background-color: #68a9ff;
+            font-weight: bolder;
+            margin-left: 20px;
+            margin-right: 20px;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="view">
+            <div id="view_d1">
+                <ul>
+                    <li>用户名:</li>
+                    <li>密码:</li>
+                    <li>确认密码:</li>
+                    <li>手机号:</li>
+                    <li>身份证号:</li>
+                    <li>邮箱:</li>
+                </ul>
+            </div>
+
+            <div id="view_d2">
+                <ul>
+                    <li><input type="text" id="u_name" placeholder="用户名"/></li>
+                    <li><input type="text" id="u_pwd" placeholder="密码"/></li>
+                    <li><input type="text" id="u_pwd2" placeholder="确认密码"/></li>
+                    <li><input type="text" id="u_tel" placeholder="手机号"/></li>
+                    <li><input type="text" id="u_id" placeholder="身份证号"/></li>
+                    <li><input type="text" id="u_email" placeholder="邮箱"/></li>
+                </ul>
+            </div>
+        </div>
+        <div id="d_btn">
+            <button type="button" id="login">登录</button>
+            <button type="button" id="register">注册</button>
+        </div>
+    </div>
+    <script type="text/javascript">
+        document.getElementById('login').onclick = function(){
+            window.location="作业登录.html";
+        };
+
+        document.getElementById('register').onclick = function (){
+            var uname = document.getElementById("u_name").value;
+            var u_pwd = document.getElementById("u_pwd").value;
+            var u_pwd2 = document.getElementById("u_pwd2").value;
+            var u_tel = document.getElementById("u_tel").value;
+            var u_id = document.getElementById("u_id").value;
+            var u_email = document.getElementById("u_email").value;
+            if (u_pwd == u_pwd2) {
+                var u_user = {"name":uname,"pwd":u_pwd,"tel":u_tel,"id":u_id,"email":u_email}
+                alert("姓名："+u_user.name+",密码："+ u_user.pwd+",电话："+ u_user.tel+
+                        ",身份证号码："+ u_user.id+",邮箱："+ u_user.email);
+            }else {
+                alert("密码不一致");
+            }
+        }
+    </script>
+</body>
+</html>
