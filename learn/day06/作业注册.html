@@ -92,6 +92,7 @@
         </div>
     </div>
     <script type="text/javascript">
+
         // 账号验证
         var u_name = $("#u_name");
         var name_info = $('#name_info');
@@ -185,11 +186,13 @@
             }
             email_info.text('√ 正确').css({"color":"green"});
         });
+        
 
         $('#login').click(function(){
             window.location="作业登录.html";
         });
         $('#register').click(function (){
+
             $('form').submit();
         })
 
