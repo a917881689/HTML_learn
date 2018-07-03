@@ -113,15 +113,24 @@
             }
             name_info.text('√ 可用').css({"color":"green"});
         });
+        // 双重密码验证
+        var u_pwd = $("#u_pwd");
+        var pwd_info = $('#pwd_info');
 
-        // 密码验证
-        var u_pwd = $("#u_pwd2");
-        var pwd_info = $('#pwd2_info');
-
-        u_pwd.focus(function () {
-            pwd_info.text('用户名必须4-16位，包括数字字母下划线，不能数字开头').css({"color":"gray"});
-        });
         u_pwd.blur(function () {
+            var $pwd = u_pwd.val();
+            if ('' == $pwd) {
+                pwd_info.text('×密码不能为空').css({"color":"red"});
+                return;
+            }
+            pwd_info.text('√ ').css({"color":"green"});
+        });
+
+        // 双重密码验证
+        var u_pwd2 = $("#u_pwd2");
+        var pwd_info2 = $('#pwd2_info');
+
+        u_pwd2.blur(function () {
             var $pwd = $("#u_pwd").val();
             var $pwd2 = u_pwd.val();
             if (!$pwd == $pwd2) {
@@ -186,13 +195,19 @@
             }
             email_info.text('√ 正确').css({"color":"green"});
         });
-        
+
 
         $('#login').click(function(){
             window.location="作业登录.html";
         });
         $('#register').click(function (){
-
+            var $input = $('input:text');
+            for (var index = 0;index < $input.length;index++) {
+                if ('' == $input.eq(index).val()) {
+                    $input.eq(index).blur();
+                    return;
+                }
+            }
             $('form').submit();
         })
 
