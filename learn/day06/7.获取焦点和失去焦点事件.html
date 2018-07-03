@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="./js/jquery-3.1.0.min.js"></script>
+</head>
+<body>
+    <input type="text" id="uname" placeholder="请输入用户名"/>
+    <span id="uname_s"></span>
+    <script type="text/javascript">
+        // 给input标签添加获取焦点事件
+        $('#uname').focus(function(){
+            $('#uname_s').text('用户名必须4-16位，包括数字字母下划线，不能数字开头');
+            $('#uname_s').css({"font-size":"10px","color":"gray"});
+        })
+        // 给input标签添加失去焦点事件
+        $('#uname').blur(function () {
+            var name = $(this).val();
+            // 非空验证
+            if ("" == name) {
+                $('#uname_s').text('X用户名不能为空');
+                $('#uname_s').css({"color":"red"})
+                return;
+            }
+            // 用户名必须4-16位，包括数字字母下划线，不能数字开头
+            // /^[A-z_]\w{3,15}$/
+            // js中验证 正则 用
+
+            var reg_uname = /^[A-z_]\w{3,15}$/;
+
+            // 若匹配成功就返回true,否则就返回false;
+            if (!reg_uname.test(name)) {
+                $('#uname_s').text('X格式错误');
+                $('#uname_s').css({"color":"blue"})
+                return;
+            }
+
+            // 3.以后我们会使用Ajax来异步验证数据库用户名是否已经存在
+            $('#uname_s').text('√用户名可用');
+            $('#uname_s').css({"color":"green"})
+        })
+
+        // 手动提交表单
+        // 当所有验证正确时
+        // $('form').submit();
+
+
+
+
+
+    </script>
+</body>
+</html>

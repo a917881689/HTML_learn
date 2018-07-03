@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="./js/jquery-3.1.0.min.js"></script>
+</head>
+<body>
+    用户类型
+    <input type="radio" name="utype" value="1" checked/> 管理员 &nbsp;
+    <input type="radio" name="utype" value="0" /> 用户 &nbsp;
+
+    <button type="button" id="d1">获取单选 选中的值</button>
+    <hr/>
+    <input type="checkbox" name="hobby" value="篮球"/>篮球 &nbsp;
+    <input type="checkbox" name="hobby" value="足球"/>足球 &nbsp;
+    <input type="checkbox" name="hobby" value="排球"/>排球 &nbsp;
+    <input type="checkbox" name="hobby" value="乒乓球"/>乒乓球 &nbsp;
+
+    <button type="button" id="bt2">获取多选 选中的值</button>
+    <hr/>
+    <select name="city" id="city">
+        <option value="021">上海</option>
+        <option value="010" selected="selected">北京</option>
+        <option value="110">西藏</option>
+    </select>
+    <button type="button" id="bt3">获取选中value值</button>
+    <button type="button" id="bt4">获取选中option文本</button>
+    <script type="text/javascript">
+        // 获取被选中的value值
+        var $text = $(':radio:checked').val();
+        var $text = $('input:checked').val();
+        var $text = $('input:radio:checked').val();
+        $('#d1').click(function () {
+            var $text = $('input[name="utype"]:checked').val();
+            alert($text)
+        })
+
+        $('#bt2').click(function () {
+            var $text = $('input[name="hobby"]:checked');
+            alert($text.eq(0).val()+","+$text.eq(1).val());
+        })
+
+        // 怎么获取下拉列表中的值
+        $('#bt3').click(function () {
+            // 默认获取的就是 下拉列表中被选中的值
+            var $city_value = $('#city').val();
+            alert($city_value);
+        });
+        // 怎么获取下拉列表中被选中的文本
+        $('#bt4').click(function () {
+            var $city_text = $('#city').find('option:selected').text();
+            alert($city_text);
+        })
+    </script>
+</body>
+</html>

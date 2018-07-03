@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="./js/jquery-3.1.0.min.js"></script>
+</head>
+<body>
+    <table border="1px"  cellspacing="0px" width="300px">
+        <thead>
+            <tr>
+                <th>学号</th>
+                <th>姓名</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>关羽</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>张飞</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>刘备</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>赵云</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>贾诩</td>
+            </tr>
+        </tbody>
+    </table>
+    <button type="button" id="odd">奇数行变背景</button>
+    <button type="button" id="even">偶数行变字体</button>
+    <script type="text/javascript">
+        // 使用过滤选择器实现隔行变色
+        // odd获取奇数行,even获取偶数行 默认都是从0行开始的
+        $('table>tbody>tr:even').css({"background-color":"#7bc611"});
+        $('table>tbody>tr:odd').css({"background-color":"#ff4c00"});
+
+        // document.getElementById('odd').onclick = (function () {}) 以后用jQuery
+        $('#odd').click(function(){
+            var odd = $('table>tbody>tr:odd');
+            odd.css({"background-color":"#999999","color":"white"})
+        })
+        $('#even').click(function(){
+            var even = $('table>tbody>tr:even');
+            even.css({"color":"#ff4c00"})
+        })
+    </script>
+</body>
+</html>

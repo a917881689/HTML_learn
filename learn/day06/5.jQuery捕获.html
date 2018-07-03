@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="./js/jquery-3.1.0.min.js"></script>
+</head>
+<body>
+    <p id="p1">天生我材必有用</p>
+    <p id="p2"><b>千金散尽还复来</b></p>
+    <input type="text" id="uname" name="uname" placeholder="请输入用户名"/>
+    <hr/>
+    <button type="button" id="bt1">获取纯文本Text</button>
+    <button type="button" id="bt2">获取标签内的所有的内容HTML</button>
+    <button type="button" id="bt3">获取input的真实值value值</button>
+    <hr/>
+    <a href="https://www.baidu.com" target="_blank">baidu</a>
+    <a href="http://www.qq.com" target="_self">QQ</a>
+    <hr/>
+    <button type="button" id="bt4">获取百度超链接的href属性值</button>
+    <button type="button" id="bt5">将QQ变成新浪</button>
+    <script type="text/javascript">
+        $('#bt1').click(function(){
+            //获取纯文本信息
+            var $p1 = $('#p1').text();
+            alert($p1);
+        })
+        $('#bt2').click(function(){
+            var $p2 = $('#p2').html();
+            alert($p2)
+        })
+        $('#bt3').click(function(){
+            var $p3 = $('#uname').val();
+            alert($p3);
+        })
+        $('#bt4').click(function(){
+//            var $baidu = $('a[target="_blank"]').attr("href");
+//            alert($baidu);
+            var $baidu = $('a[target="_blank"]').prop("href");
+            alert($baidu)
+        })
+
+        $('#bt5').click(function(){
+//            var $qq = $('a[target="_self"]');
+//            $qq.text(Sina);
+            $('a[target="_self"]').text('sina');
+            $('a[target="_self"]').attr({"href":"https://www.sina.com.cn/"});
+
+        })
+    </script>
+</body>
+</html>

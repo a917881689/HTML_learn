@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="./js/jquery-3.1.0.min.js"></script>
+</head>
+<body>
+    <p><b>打油诗</b></p>
+    <p>登高：杜甫</p>
+    <p>青出于蓝而胜于蓝</p>
+    <hr/>
+    <ul>
+        <li>上海</li>
+        <li>北京</li>
+        <li>贵州</li>
+        <li>杭州</li>
+    </ul>
+    <ul>
+        <li>海南省</li>
+        <li>江苏省</li>
+        <li>浙江省</li>
+    </ul>
+    <script type="text/javascript">
+        // 如何选择第一个p元素(使用过滤选择器)
+
+        // 选取 打油诗
+        $('p').eq(0).text();
+        // 选取 <b>打油诗</b>
+        $('p').eq(0).html();
+
+        var p = $('p:first').text();
+        var p2 = $('p:last').text();
+
+        // 思考寻找中间的p(i)元素
+        // next表示下个兄弟节点
+        // prev表示上个兄弟节点
+        var p3 = $('p:first').next().text();
+        var p4 = $('p:last').prev().text();
+        alert(p4);
+
+        // 练习：获取到li里面的上海
+        var add = $('ul>li:first').text();
+        alert(add)
+        // 练习：获取到li里面的上海和海南
+        var add = $('ul>li:first-child').text();
+        alert(add)
+        // 练习：获取到li里面的杭州
+        var add = $('ul:first>li:last').text();
+        alert(add)
+        // 练习：获取到li里面的杭州和浙江省
+        var add = $('ul>li:last-child').text();
+        alert(add)
+
+        // 第一个ul下的所有li
+        $('ul:first>li')
+        // 第一个ul下的第一个li  上海
+        $('ul:first>li:first')
+        // 第一个ul下的最后一个li  杭州
+        $('ul:first>li:last-child')
+        // 每个ul中的第一个li 上海,海南省
+        $('ul>li:first-child')
+        // 每个ul中的第一个li 上海,海南省
+        $('ul>li:last-child').text();
+        // 每个ul中的第二个li (子属性)
+        $('ul>li:first-child').next().text();
+    </script>
+</body>
+</html>

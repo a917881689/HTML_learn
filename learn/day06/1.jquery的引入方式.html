@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!-- 连接外部样式 -->
+    <link rel="stylesheet" href=""/>
+    <!-- $ is not defined 浏览器f12,检查jquery文件路径 -->
+    <script type="text/javascript" src="./js/jquery-3.1.0.min.js"></script>
+
+</head>
+<body onload="">
+    <script type="text/javascript">
+        // 导入外部js后，我们需要自定义脚本
+
+
+        window.onload = function () {
+            // 网页中所有的文档document和资源都加载完成后才会执行里面写的脚本语句
+        }
+        // 原版：
+        jQuery(document).ready(function () {
+
+        })
+        // 简写：
+        $(document).ready(function () {
+            // 表示的是当document加载完成后就直接执行脚本了; 关联的资源不一定加载
+        });
+        // 最简写
+        $(function() {
+            c = 10; // $(function(){}) 方法内部是受保护的,所有的内容都属于局部成员
+        })
+
+        // 自执行函数
+        function add () {
+            a = 20; //全局变量
+        }
+        // 函数建议放在$(function(){})外面,否则只能在这个代码块里面可以访问
+        add();
+        function show () {
+            alert(c); // c is not ident
+        }
+        show();
+    </script>
+</body>
+</html>

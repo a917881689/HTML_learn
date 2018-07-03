@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>选择器</title>
+    <script type="text/javascript" src="./js/jquery-3.1.0.min.js"></script>
+</head>
+<body>
+    <h2>jquery强大选择器</h2>
+    <p id="p1" class="red">我不是天生强大,我只是注定要凉</p>
+    <a href="https://www.baidu.com" target="_blank">百度</a>
+    <a href="https://www.qq.com" target="_blank">QQ</a>
+    <a href="https://www.sina.com.cn" target="_self">新浪</a>
+    <span class="red">上海青团</span>
+    <span>北京烤鸭</span>
+    <span class="red">天津大麻花</span>
+    <hr/>
+    <input type="text" name="uname" value="admin"/>
+    <input type="password" name="pwd" value="123"/>
+
+    <input type="button" value="登录"/>
+    <button type="button">注册</button>
+    <script type="text/javascript">
+        /**
+         * jQuery 选择器语法： jQuery('')  $('')
+         * # id选择器
+         * . 类选择器
+         *
+         */
+
+        // 1.*通配符
+        // *此时选取的html元素
+        // text获取的是标签中的文本 与JS中的innerText一样
+        var item = jQuery('*').text();
+        // text获取的是标签中的所有内容 与JS中的innerHTML一样
+        var item = $('*').html();
+        // jQuery 可以简写成 $
+        // 不要直接打印
+        // document.write(item)
+        // alert(item)
+
+
+        // 2.通过id 选择 （js/jQuery）
+        // js 获取p1标签文本
+        var p1_JS =document.getElementById('p1').innerText;
+        // jQuery 通过id选择 #id
+        var p1_jQuery = $('#p1').text();
+        // alert(p1_jQuery);
+
+        // 3.通过标签名选择
+        var a = document.getElementsByTagName('a')[0]; // [Object HTMLColl]
+        // alert(a)
+        // [Object Object]
+        // jQuery对象可以通过[index]的模式转换成JS
+        // var a2 = $('a')[0].innerText;
+        // Jquery 通过eq(index)来获取集合中的元素（jQuery）
+        var a2 = $('a').eq(0).text();
+        // alert(a2)
+
+        // 4.通过Class选择（类名）(js/jQuery)
+        var span = document.getElementsByClassName('red')[1].innerText;
+        var span2 = $('.red').eq(1).text();
+
+        // 查找class='red' 的所有span元素
+        var span2 = $('span.red').text();
+        // alert(span2);
+
+        // 5.通过name(名字)选择
+        var uname = document.getElementsByName('uname')[0].value;
+        var pwd = document.getElementsByName('pwd')[0].value;
+        // alert(uname+","+pwd);
+        // var uname = $('input[name="uname"]').val();
+        // alert(uname);
+        // jQuery 属性选择器：$('[属性名="属性值"]')
+        var uname = $('[name]').eq(0).val();
+        var uname = $('input[name="uname"]').val();
+
+
+        // 练习1.选取target="_blank"的a并且输出文本
+        var text = $('a[target="_blank"]').text();
+        alert(text);
+        // 练习2.分别获取两个按钮中的文本
+//        var btn_text = $('input[type="button"]').val();
+//        alert(btn_text);
+//
+//        var btn_text = $('button[type="button"]').text();
+//        alert(btn_text);
+
+        var btn_text = $('[type="button"]');
+        for (var index = 0;index < btn_text.length;index++) {
+            alert(btn_text.eq(index).val()==""?btn_text.eq(index).text():btn_text.eq(index).val())
+        }
+
+        // 6.过滤选择器
+        var bt = $(':button');
+        var bt_input = $('input:button').val();
+        var bt_botton = $('button:button').text();
+
+
+    </script>
+</body>
+</html>
