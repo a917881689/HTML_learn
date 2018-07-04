@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="./js/jquery-3.1.0.min.js"></script>
+</head>
+<body>
+    <div title="大爷">
+        <h2>嵌套标签</h2>
+        <p id="p1">凉凉</p>
+        <p>GG</p>
+        <a href="#">baidu</a>
+    </div>
+    <div title="二大爷">
+        <span>上海</span>
+        <span>北京</span>
+    </div>
+    <script type="text/javascript">
+        $(function(){
+            // 1.获取p1标签文本
+            $('#p1').text();
+            // 2.根据p1获取GG 文本
+            $('#p1').next().text();
+            // 3.根据p1来获取baidu 文本
+            $('#p1').next().next().text();
+            // 4.根据p1来获取 h2文本
+            $('#p1').prev().text();
+            // 5.根据p1 来获取大爷
+            $('#p1').parent().prop("title");
+            // 6.根据p1 来获取二大爷
+            $('#p1').parent().next().prop("title");
+            // 7.根据p1 来获取二大爷的儿子
+            $('#p1').parent().next().children().text();
+            // 8.根据p1 来获取上海
+            var $a = $('#p1').parent().next().children().eq(0).text();
+            $a = $('#p1').parent().next().children(':first-child').eq(0).text();
+            $a = $('#p1').parent().next().children(':last-child').eq(0).text();
+
+            // 9.获取所有兄弟节点
+            $a = $('#p1').siblings().text();
+            alert($a)
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="./js/jquery-3.1.0.min.js"></script>
+    <style type="text/css">
+        #header {
+            text-align: center;
+        }
+        #header>span {
+            background-color:#368dff;;;
+            color: #FFF;
+            border-radius: 4px;
+            padding: 2px 4px;
+        }
+        #tb {
+            border-collapse: collapse;
+            margin: 0 auto;
+            width: 400px;
+        }
+        #tb,#tb th,#tb td {
+
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <label for="heroName">英雄名</label>
+        <input type="text" id="heroName" placeholder="请输入英雄名"/> &nbsp;&nbsp;
+        <label for="hp">英雄名</label>
+        <input type="text" id="hp" placeholder="请输入血量(数字)"/> &nbsp;&nbsp;
+        <span id="addhero">开始录入英雄信息</span>
+    </div>
+    <hr/>
+    <table id="tb">
+        <thead>
+            <tr>
+                <th>英雄名</th>
+                <th>HP</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <script type="text/javascript">
+        $('#addhero').click(function () {
+            // 1.获取英雄信息并做相关验证
+            var $hero = $('#heroName').val();
+            if ('' == $hero) {
+                alert("英雄名不能为空");
+                return;
+            }
+            var $hp = $('#hp').val();
+            if ('' == $hp) {
+                alert("hp不能为空");
+                return;
+            }
+            if (isNaN($hp)) {
+                alert("hp必须为数字")
+                return;
+            }
+            // 2.将英雄信息动态的添加到表格中
+            var $str = "<tr><td>"+$hero+"</td><td>"+$hp+"</td></tr>";
+            $('#tb>tbody').append($str);
+            $('#tb>tbody>tr:even').css({"background-color":"#368dff","color":"white"})
+
+
+        })
+    </script>
+</body>
+</html>

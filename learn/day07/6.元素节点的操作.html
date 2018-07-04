@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="./js/jquery-3.1.0.min.js"></script>
+    <style type="text/css">
+        #d1 {
+            background-color:aqua;
+        }
+    </style>
+</head>
+<body>
+    <h1>登高</h1>
+    <!-- 对于 d1 元素添加的位置 -->
+    <!-- before -->
+    <div id="d1">
+        <!-- prepend -->
+        <p id="p1">渚清沙白鸟飞回</p>
+        <!-- append -->
+    </div>
+    <!-- after -->
+    <hr/>
+    <button type="button" id="bt_before">添加作者(before)</button>
+    <button type="button" id="bt_after">添加日期(after)</button>
+    <hr/>
+    <button type="button" id="bt_prepend">添加前一句诗句(prepend)</button>
+    <button type="button" id="bt_append">添加后一句诗句(append)</button>
+    <hr/>
+    <button type="button" id="bt_remove">删除元素本身及其子元素(remove)</button>
+    <button type="button" id="bt_empty">删除元素中的子元素,不会删除父元素本身(empty)</button>
+    <script type="text/javascript">
+        // 添加指定元素的上一个兄弟元素
+        $('#bt_before').click(function () {
+            $('#d1').before("<span>作者：杜甫</span>");
+        })
+        // 添加指定元素的下一个兄弟元素
+        $('#bt_after').click(function () {
+            var $date = new Date();
+            $('#d1').after("<span><b>"+$date+"</b></span>")
+        })
+        // 通过父元素 从开始位置依次追加子元素
+        $('#bt_prepend').click(function () {
+            $('#d1').prepend("<p>风急天高猿啸哀</p>")
+        })
+        // 通过父元素 从最后一个位置依次追加子元素
+        $('#bt_append').click(function () {
+            $('#d1').append("<p>无边落木萧萧下</p>")
+        })
+        // 删除元素本身及其子元素
+        $('#bt_remove').click(function () {
+            $('#d1').remove();
+            // 删除所有p元素;
+            $('p').remove();
+            // 删除所有p元素中class等于"red"的子元素; 不建议在使用remove使用过滤器
+            $('p').remove(".red");
+        })
+        // 删除元素中的子元素,不会删除父元素本身
+        $('#bt_empty').click(function () {
+            $('#d1').empty();
+        })
+    </script>
+</body>
+</html>

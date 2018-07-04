@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="./js/jquery-3.1.0.min.js"></script>
+</head>
+<body>
+    <button type="button" id="bt1">点击事件</button>
+    <hr/>
+    <span id="s1">双击我</span>
+    <hr/>
+    <span id="s2">鼠标移入</span> &nbsp;
+    <span id="s3">鼠标移出</span> &nbsp;
+    <span id="s4">鼠标悬停</span> &nbsp;
+    <script type="text/javascript">
+        // 点击事件(任意元素都可以)
+        $('#bt1').click(function () {
+            alert("我是点击事件");
+        })
+        $('#s1').dblclick(function () {
+            alert("我是双击事件")
+        })
+        // 3.鼠标移入
+        $('#s2').mouseenter(function () {
+            $(this).css({"color":"red"})
+        })
+        // 4.鼠标移出
+        $('#s3').mouseleave(function () {
+            $(this).css({"color":"blue"})
+        })
+        // 5.鼠标悬停事件
+        $('#s4').hover(function () {
+            $(this).css({"color":"red"})
+        },function () {
+            $(this).css({"color":"blue"})
+        })
+    </script>
+</body>
+</html>
