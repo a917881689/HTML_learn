@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>表单</title>
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
+    <style type="text/css">
+    </style>
+</head>
+<body>
+<div class="container">
+    <h3>水平表单 form-horizontal</h3>
+    <form action="#" class="form-horizontal">
+        <div class="form-group">
+            <label for="email" class="control-label col-md-offset-3 col-md-2 ">Email</label>
+            <div class="col-md-4 ">
+                <input type="text" class="form-control" id="email" placeholder="Email"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Name" class="control-label col-md-offset-3 col-md-2 ">Name</label>
+            <div class="col-md-4 ">
+                <input type="text" class="form-control" id="Name" placeholder="Name"/>
+            </div>
+        </div>
+        <button type="button">Send invitation </button>
+    </form>
+    <h3>特殊表单组的表单</h3>
+
+    <form action="#" class="form-inline">
+        <div class="form-group">
+            <label for="money" class="sr-only">金融金额</label>
+            <div class="input-group">
+                <div class="input-group-addon">$</div>
+                <input type="text" id="money" placeholder="Account"/>
+                <div class="input-group-addon">.00</div>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>

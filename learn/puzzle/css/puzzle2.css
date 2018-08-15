@@ -1,0 +1,13 @@
+#container {
+    width: 330px;
+    height: 330px;
+    margin: auto;
+    background-color: #e8e8e8;
+}
+#container>div>div {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #24e800;
+    margin: -1px -1px 0 0;
+    float: left;
+}

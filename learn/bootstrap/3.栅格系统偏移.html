@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>栅格系统偏移</title>
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
+    <style type="text/css">
+        .bg-red {
+            background-color: #ff4488;
+        }
+        .bg-blue {
+            background-color: cornflowerblue;
+        }
+        .bg-green {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid bg-info">
+        <!-- 自适应调节设备-->
+        <div class="row">
+            <div class="col-xs-12 col-md-8 bg-blue">col-md-8</div>
+            <div class="col-xs-6 col-md-4 bg-red">col-md-4</div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6 col-md-4 bg-red">col-md-4</div>
+            <div class="col-xs-6 col-md-4 bg-green">col-md-4</div>
+            <div class="col-xs-6 col-md-4 bg-blue">col-md-4</div>
+        </div>
+        <!-- 栅格系统的偏移 -->
+        <hr/>
+        <h2>栅格系统的偏移 col-md-offset-4 相当于margin-left 4个栅格</h2>
+        <div class="row">
+            <div class="col-md-4 bg-blue">col-md-4</div>
+            <div class="col-md-4 col-md-offset-4 bg-green">col-md-4</div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-md-offset-3 bg-red" >col-md-3</div>
+            <div class="col-md-3 col-md-offset-3 bg-green" >col-md-3</div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 bg-blue">col-md-8</div>
+        </div>
+        <h2>栅格系统的偏移2 push向右推,pull向左拉</h2>
+        <div class="row">
+            <div class="col-md-3 bg-red">col-md-3</div>
+            <div class="col-md-5 bg-green">col-md-5</div>
+        </div>
+        <hr/>
+        <div class="row">
+            <div class="col-md-3 col-md-push-5 bg-red">col-md-3</div>
+            <div class="col-md-5 col-md-pull-3 bg-green">col-md-5</div>
+        </div>
+    </div>
+</body>
+</html>

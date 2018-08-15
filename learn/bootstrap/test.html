@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="css/square/green.css" rel="stylesheet">
+    <script type="text/javascript" src="./js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/icheck.min.js"></script>
+    <style type="text/css">
+        .nologin-tip {
+            border: 1px solid #edd28b;
+            background: #fffdee;
+            padding: 10px 20px;
+            line-height: 25px;
+            margin-bottom: 20px;
+            color: #ffFfff;
+        }
+        .btn-login:hover {
+            color: #fff;
+            text-decoration: none;
+            background-color: #f07770;
+        }
+        .nologin-tip .wicon {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 10px;
+            width: 16px;
+            height: 16px;
+            overflow: hidden;
+            background: url(//misc.360buyimg.com/user/cart/css/i/icon16.png) 0 0 no-repeat;
+        }
+        .btn-login {
+            text-decoration: none;
+            font-family: arial,"Microsoft YaHei";
+            display: inline-block;
+            height: 25px;
+            line-height: 25px;
+            background-color: #e73500;
+            border-radius: 3px;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 400;
+            padding: 0 10px;
+            vertical-align: middle;
+            cursor: pointer;
+            border: 0;
+            float: none;
+            transition: all .2s ease-out;
+            margin-left: 10px;
+        }
+
+        .quantity{
+            position: relative;
+            overflow: hidden;
+            height: 35px;
+            width: 94px;
+        }
+
+        .shop-num{
+            border: 1px solid #cacbcb;
+            border-right: 0;
+            height: 26px;
+            line-height: 18px;
+            padding: 1px 0;
+            width: 25px;
+            text-align: center;
+            color: #666;
+            margin: 0;
+            background: #fff;
+            text-decoration: none;
+        }
+        .itxt {
+            position: absolute;
+            top: 0;
+            border: 1px solid #cacbcb;
+            width: 42px;
+            height: 26px;
+            line-height: 18px;
+            text-align: center;
+            padding: 1px;
+            margin: 0;
+            font-size: 12px;
+            font-family: verdana;
+            color: #333;
+        }
+        .shop1 {
+            float: left;
+        }
+        .shop2 {
+            float: right;
+            border: 1px solid #cacbcb;
+            border-left: 0;
+            color: #666;
+        }
+
+        .pro-info {
+            border: 1px solid #bdcacd;
+            width: 180px;
+            height: 242px;
+        }
+
+        .pro-img img {
+            width: 170px;
+            height: 160px;
+            padding: 5px 5px 3px 5px;
+        }
+
+        .pro-type {
+            text-align: center;
+            width: 180px;
+            height: 70px;
+        }
+        .pro-string {
+            height: 42px;
+            font-family: Microsoft YaHei;
+            font-size: 14px;
+        }
+        .pro-price {
+            height: 28px;
+            line-height: 28px;
+            color: #ff5f00;
+            font-weight: bolder;
+        }
+        .btn-details {
+            display: none;
+        }
+        .btn-details>a {
+            display: block;
+            color: white;
+            font-weight: bolder;
+            text-align: center;
+            height: 28px;
+            line-height: 28px;
+            background-color: #ff5f00;
+            text-decoration: none;
+        }
+
+        .pagination{
+            margin: auto;
+            text-align: center;
+            font-size: 12px;
+            padding: 10px 0;
+            display:inline-block
+        }
+        .pagination a,.pagination span{
+            display: inline-block;
+            padding: 0 10px;
+            height: 28px;
+            line-height: 28px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            text-decoration: none;
+            color: #999;
+            cursor: pointer;
+            margin-right:5px;
+        }
+        .pagination a:hover,.pagination span:hover{
+            background-color: #f0988c;
+            color: white;
+        }
+        .pagination a:hover:not(.disabled):not(.current),.pagination span:hover:not(.disabled):not(.current){
+            color:#f04848;
+        }
+        .pagination a.disabled,.pagination span.disabled{
+            color: #bfbfbf;
+            background: #f5f5f5;
+            cursor: no-drop;
+            border: 1px solid #ddd;
+        }
+        .pagination a.current,.pagination span.current{
+            color: #fff;
+            background: #f04848;
+            border: 1px solid #f04848;
+        }
+        #input_page {
+            -webkit-border-radius:3px;
+            -moz-border-radius:3px;
+            border: 1px solid #bfbfbf;
+            width: 40px;
+            height: 23px;
+            text-align: center;
+            outline:none;
+        }
+        #input_page:focus {
+            border: 1px solid #f04848;
+        }
+        .dropdown-menu {
+            min-width: 6%;
+        }
+        .btn-red {
+            background-color: #ff282d;
+            color: white;
+        }
+        .btn-red:hover,.btn-red:focus {
+            color: white;
+        }
+        .bg-orange{
+            background-color: #ff9a78
+        }
+        .bg-orange>li:hover,.bg-orange>li>a:hover{
+            background-color: #ff4c11
+        }
+    </style>
+</head>
+<body>
+<input type ='checkbox'>
+<input type ='checkbox'checked>
+<input type ='radio' name =''>
+<input type ='radio' name ='' checked>
+
+<label for="square-checkbox-2" class="">Checkbox 2</label>
+<li><a class='choose_classify' name='product' id="abac">pro.product.name</a></li>
+<div class="container">
+    <div class="row">
+        <div class="clean"></div>
+        <div class="margin-top-30 col-md-1 col-md-push-1 ">
+            <a href="index.jsp"><img src="images/LOGO.png" alt="" id="logo-img"/></a>
+        </div>
+        <div class="col-md-9 margin-top-40">
+            <div class="dropdown col-md-2 col-md-push-3">
+                <button type="button" class="btn btn-red" data-toggle="dropdown">
+                    全部类别 <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu bg-orange">
+                    <li><a href="#">上海</a></li>
+                    <li><a href="#">重庆</a></li>
+                    <li><a href="#">成都</a></li>
+                </ul>
+            </div>
+            <div class="col-md-10 col-md-push-3">
+                <input type="text" placeholder="输入宝贝" id="input_info"/>
+                <button class="query_button" id="btn-query">搜索</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="nologin-tip">
+    <span class="wicon"></span>
+    您还没有登录！登录后购物车的商品将保存到您账号中
+    <a class="btn-login " href="#none" >立即登录</a>
+
+</div>
+
+<div class="quantity" >
+    <a href="javascript:void(0);" class="shop-num shop1" >-</a>
+    <input autocomplete="off" type="text" class="itxt" value="1" minnum="1">
+    <a href="javascript:void(0);" class="shop-num shop2" id="">+</a>
+</div>
+<hr/>
+
+    <div class="pro-info">
+        <div class="pro-img">
+            <a href=""><img src="img/1.jpg" alt=""/></a>
+        </div>
+        <div class="pro-type">
+            <div class="pro-string">商品名</div>
+            <div class="pro-price">￥商品价格</div>
+            <div class="btn-details"><a href="">查看详情</a></div>
+        </div>
+    </div>
+<hr/>
+<div class="pagination">
+    <span class="disabled" >首页</span>
+    <span class="disabled" >上一页</span>
+    <span class="current">1</span>
+    <span>2</span>
+    <span>3</span>
+    <span>4</span>
+    <span>5</span>
+    <span>6</span>
+    <span>7</span>
+    <span>下一页</span>
+    <span>尾页</span>
+    <input type="text" id="input_page" class="pro-click" value="1" minnum='1' maxlength="5" onkeyup="value=value.replace(/[^\d]/g,'')"/>
+    <span>跳转</span>
+</div>
+
+<script type="text/javascript">
+    $('input').iCheck({
+        checkboxClass :'icheckbox_square-green',
+        radioClass :'iradio_square-green',
+        increaseArea :'20％'
+    });
+    console.log("name="+$('#abac').prop("name"));
+    // 悬停事件
+    $('.pro-type').hover(function () {
+        $(this).children('.pro-string').hide();
+        $(this).children('.btn-details').show();
+        $(this).children('.pro-price').css({'height':'42px','line-height':'42px'});
+    },function () {
+        $(this).children('.pro-string').show();
+        $(this).children('.btn-details').hide();
+        $(this).children('.pro-price').css({'height':'28px','line-height':'28px'});
+    })
+</script>
+</body>
+</html>

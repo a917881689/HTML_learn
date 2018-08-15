@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        .pagination {
+            clear:both;
+            line-height: 32px;
+            list-style-type: none;
+        }
+        .pagination>li {
+            float:left;
+            width: 35px;
+        }
+        .pagination>li>a:link , .pagination>li>a:visited {
+            display: block;
+            font-size: 24px;
+            text-align: center;
+            color: #121212;
+            text-decoration: none;
+        }
+        .pagination>li>a:hover {
+            border: 1px solid orangered;
+        }
+        .active span {
+            display: block;
+            background-color: orangered;
+            color:white;
+        }
+        #foot {
+            color: gray;
+            line-height: 32px;
+        }
+        #goto {
+            padding: 3px 8px;
+        }
+        #goto:hover {
+            border:1px solid orangered;
+        }
+    </style>
+</head>
+<body>
+<ul class="pagination">
+    <li><a href="">&laquo;</a></li>
+    <li class="active" ><a href=""><span>1</span></a></li>
+    <li><a href=""><span>2</span></a></li>
+    <li><a href=""><span>3</span></a></li>
+    <li><a href="">&raquo;</a></li>
+</ul>
+<div id="foot">共50页，到 <input type="text" size="1" id="num" name="num"/>页 <span id="goto">确定</span></div>
+</body>
+</html>

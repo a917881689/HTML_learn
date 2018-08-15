@@ -1,0 +1,94 @@
+.dropdown>.btn-red {
+    background-color: #ff282d;
+    color: white;
+}
+.dropdown>.btn-red:hover,.btn-red:focus {
+    color: white;
+}
+.dropdown>.bg-orange{
+    background-color: #ff9a78;
+    z-index: 10;
+}
+.dropdown>.bg-orange>li:hover,.dropdown>.bg-orange>li>a:hover{
+    background-color: #ff4c11;
+}
+.open>.dropdown-menu {
+    min-width: 16%;
+}
+.container>.pad-left-0 {
+    padding-left: 0;
+}
+.margin-top-40 {
+    margin-top: 40px;
+}
+.margin-top-30 {
+    margin-top: 30px;
+}
+.nav_bar {
+    background: #ff4c11;
+    height: 30px;
+}
+.nav_bar_container {
+    width: 960px;
+    margin: 0 auto;
+}
+.nav_bar_container ul li {
+    float: left;
+    color: #cccccc;
+    margin-right: 5px;
+    height: 28px;
+    line-height: 28px;
+}
+.nav_bar_container ul li > a {
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+.login_menu {
+    height: 30px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.07);
+}
+.login_container {
+    width: 960px;
+    margin: 0 auto;
+    height: 30px;
+}
+.m_left {
+    float: left;
+    margin-left: 30px;
+    position: relative;
+    top: 5px;
+}
+.m_left li {
+    float: left;
+}
+.m_right {
+    float: right;
+    position: relative;
+    top: 5px;
+}
+.m_right li {
+    float: left;
+    margin-left: 15px;
+}
+#input_info {
+    border: #f00 3px solid;
+    width: 440px;
+    height: 36px;
+    float: left;
+    padding: 0 10px;
+}
+.query_button {
+    width: 140px;
+    height: 36px;
+    background: #ff0000;
+    border: 0;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+.login_container .c_red {
+    color: red;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>导航栏</title>
+    <link rel="stylesheet" href="/css/bootstrap.css" />
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <style type="text/css">
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- 1.选项卡式的导航条-->
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#">首页</a></li>
+        <li><a href="#">登录</a></li>
+        <li><a href="#">注册</a></li>
+    </ul>
+    <!-- 2.胶囊式的导航条-->
+    <ul class="nav nav-pills">
+        <li class="active"><a href="#">首页</a></li>
+        <li><a href="#">登录</a></li>
+        <li><a href="#">注册</a></li>
+    </ul>
+    <!-- 3.胶囊垂直式的导航条-->
+    <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="#">首页</a></li>
+        <li><a href="#">登录</a></li>
+        <li><a href="#">注册</a></li>
+    </ul>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $('ul li').click(function (e) {
+            e.preventDefault();
+            $(this).tab('show');
+        })
+    })
+</script>
+</body>
+</html>

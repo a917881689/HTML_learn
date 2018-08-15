@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Bootstrap 实例 - 工具提示（Tooltip）插件</title>
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.7/css/bootstrap-dialog.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.7/js/bootstrap-dialog.min.js"></script>
+
+
+    <style>
+        .dropdown-submenu {
+            position:relative;
+        }
+        .dropdown-submenu>.dropdown-menu {
+            top:0;
+            left:100%;
+            margin-top:-6px;
+            margin-left:-1px;
+            -webkit-border-radius:0 6px 6px 6px;
+            -moz-border-radius:0 6px 6px 6px;
+            border-radius:0 6px 6px 6px;
+        }
+        .dropdown-submenu:hover>.dropdown-menu {
+            display:block;
+        }
+        .dropdown-submenu>a:after {
+            display:block;
+            content:" ";
+            float:right;
+            width:0;
+            height:0;
+            border-color:transparent;
+            border-style:solid;
+            border-width:5px 0 5px 5px;
+            border-left-color:#cccccc;
+            margin-top:5px;
+            margin-right:-10px;
+        }
+        .dropdown-submenu:hover>a:after {
+            border-left-color:#ffffff;
+        }
+        .clean {
+            clear: both;
+        }
+        .modal.in .modal-dialog {
+            width: 300px;
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+<div class="clean"><button type="button" id="laer" class="btn btn-info">laer</button></div>
+<script type="text/javascript">
+    $('#laer').click(function () {
+        BootstrapDialog.show({
+            title: 'Default Title',
+            message: '用户名:<input type="text" class="form-control"> <div class="margin-top-15">密码:<input type="text" class="form-control"></div>',
+            draggable: true,
+            setSize:BootstrapDialog.SIZE_SMALL,
+            buttons: [{
+                label: 'Title 1',
+                action: function(dialog) {
+                    dialog.setTitle('Title 1');
+                }
+            }, {
+                label: 'Title 2',
+                action: function(dialog) {
+                    dialog.setTitle('Title 2');
+                }
+            }]
+        });
+    })
+
+</script>
+</body>
+</html>
